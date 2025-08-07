@@ -1,2 +1,2 @@
-# PRODIGY_WD_02
-PRODIGY Web Development Task 2
+# PRODIGY_WD_01
+PRODIGY Web Development Task 1
