@@ -1,0 +1,174 @@
+/*Reset and Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+   scroll-behavior: smooth; 
+}
+
+/* Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 16px 40px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: 0.4s;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color:white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/*Hamburger menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    animation: fadeInDown 1s ease-in-out;
+
+}
+
+.hero-text p {
+    font-size:1.2rem;
+    margin: 20px 0;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.btn {
+    padding: 12px 24px;
+    background: #fff;
+    color: #111;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #ffd700;
+}
+
+/* Content Section */
+.content {
+    padding: 100px 40px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.content:nth-child(even) {
+    background: #f0f0f0 ;
+}
+
+.content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Scroll Effect */
+.scrolled {
+    background: rgba(0,0,0,0.8);
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: rgba(0,0,0,0.95);
+    }
+
+    .nav-links.show {
+        height: 200px;
+        padding: 20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/*Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0);}
+    
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0;transform: translateY(20px);}
+    to { opacity: 1;transform: translateY(0);}
+    
+}
